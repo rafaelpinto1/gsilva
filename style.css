@@ -1,0 +1,109 @@
+/* Vídeo ocupando toda a tela */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+  filter: grayscale(100%) contrast(1.2) brightness(0.7);
+}
+
+/* Overlay escuro para melhorar contraste */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* Conteúdo centralizado por cima */
+.content-overlay {
+  position: relative;
+  z-index: 10;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  max-width: 480px;
+  margin: auto;
+  user-select: none;
+  text-shadow: 0 0 10px rgba(196, 0, 0, 0.9);
+}
+
+/* Logo maior e com brilho vermelho */
+.logo {
+  height: 180px;
+  width: auto;
+  margin: 40px auto 30px auto;
+  filter:
+    drop-shadow(0 0 8px #c40000)
+    drop-shadow(0 0 12px #c40000);
+}
+
+/* Título com fonte forte e sombra vermelha */
+.titulo {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #fff;
+
+}
+
+/* Subtítulo menor e suave */
+.subtitulo {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #eee;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+}
+
+/* Botões vermelho sólido e texto branco */
+button.btn {
+  background-color: #c40000 !important;
+  color: #fff !important;
+  border: 2px solid #c40000 !important;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  padding: 12px 0;
+  font-weight: 600;
+  width: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 4px 8px rgba(196, 0, 0, 0.5);
+}
+
+/* Hover/focus inverte cores */
+button.btn:hover,
+button.btn:focus {
+  background-color: #fff !important;
+  color: #c40000 !important;
+  border-color: #c40000 !important;
+  box-shadow: 0 0 12px #c40000;
+}
+
+/* Espaçamento entre os botões */
+button.btn + button.btn {
+  margin-top: 20px;
+}
+
+/* Responsividade para celular */
+@media (max-width: 576px) {
+  .logo {
+    height: 220px;
+  }
+  .titulo {
+    font-size: 1.6rem;
+  }
+  .subtitulo {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+  button.btn {
+    font-size: 1.1rem;
+  }
+}

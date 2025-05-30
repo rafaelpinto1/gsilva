@@ -1,0 +1,105 @@
+/* Fundo vermelho */
+body {
+  background-color: #c40000;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 20px 0;
+  min-height: 100vh;
+}
+
+/* Logo centralizado e maior */
+.header-logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  max-width: 220px;
+  width: 80%;
+  height: auto;
+}
+
+/* Título principal - texto branco */
+h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+/* Container cards com grid */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Cards brancos com texto vermelho */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px 25px;
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+  color: #c40000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 140px;
+  text-align: center;
+  user-select: none;
+}
+
+.card:hover {
+  box-shadow:
+    0 12px 30px rgba(196,0,0,0.4);
+  transform: translateY(-6px);
+}
+
+.card-title {
+  font-weight: 800;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  letter-spacing: 0.03em;
+}
+
+.card-text {
+  font-size: 1rem;
+  line-height: 1.4;
+  max-width: 260px;
+  color: #a00000;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 576px) {
+  .logo {
+    max-width: 180px;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  .card {
+    padding: 24px 18px;
+    min-height: 120px;
+  }
+  .card-title {
+    font-size: 1.4rem;
+  }
+  .card-text {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+}

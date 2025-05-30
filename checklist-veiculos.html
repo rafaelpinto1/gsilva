@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checklist de Veículos - G. Silva Logística</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="checklist-veiculos.css" />
+</head>
+<body>
+  <header class="header-logo">
+    <img src="logo2.svg" alt="Logo G. Silva Logística" class="logo" />
+  </header>
+
+  <main class="container">
+    <h1>Checklist de Veículos</h1>
+
+    <div class="cards">
+      <div class="card" onclick="abrirChecklist('porta-cntr-carreta.html')">
+        <h2 class="card-title">CHECK LIST PORTA CNTR E CARRETA</h2>
+        <p class="card-text">Verifique itens essenciais para segurança e funcionamento.</p>
+      </div>
+
+      <div class="card" onclick="abrirChecklist('cavalo.html')">
+        <h2 class="card-title">CHECK LIST CAVALO E CAMINHÃO</h2>
+        <p class="card-text">Confira os itens específicos para o veículo cavalo.</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='https://rafaelpinto1.github.io/checklist-gsilva/'">
+        <h2 class="card-title">CHECK LIST SIDER</h2>
+        <p class="card-text">Realize a inspeção completa do caminhão.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    function abrirChecklist(url) {
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>
